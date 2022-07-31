@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link type="image/x-icon" rel="icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+  AdnJLH8AAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAARpQTFRF
+  AAAA/////////////////////////////////////////////f7+/f7+////////stHm////sdDl
+  /v7/+/3+////1ObyYqPOXZ7KX6DLXJ7K//3999DL9L639sC5ppCeTXmkJ365CGmtUJbF1OXx+/3+
+  5vD34+724/D459fZ4lpJ4VJB3EEu46CbRZLESZHD9Pj7wdrrLYG6Inu3IXy4hmN35FtK99XR7JaL
+  5FRCsrLCE3Kzp8riaqXOBmmtbaHI2Kem87ev+d7a5GRV6Yh9c6nPRpDC7PP5/f7+ZKLMKYC72qqp
+  5l9N411M4VZF4VVE9dHN5fH56fL4z+LvF3Kyf7LV+dTP8rav8rew8rmy99TQ//z8YqHL2ujzAyDg
+  KQAAABV0Uk5TAAAHSafk+xiS7rEGkgZK7e3j7QaSbhp6TwAAAAFiS0dEAf8CLd4AAAAJcEhZcwAA
+  CxMAAAsTAQCanBgAAAC2SURBVBjTZY/VEsJADEWzsGyLtRRY3N3d3d1d//83kGGAgfOUm4fkXABA
+  IjGWECLBYhGCe0QMK6VPpCyDECBGRt/IGARyln6hUALHv2ad3mA0qTjAj2C2WG12h9Pl9mAQvD5/
+  IBgKhyPRWDxBBSDJVDqTzeULxVK5QikB4qnW6o1mq93p9vqPhTAYjsaT6Wy+WK7u1wTA6812tz8c
+  T+fnLwyc+nL9ePAcaLSDLzFW/q/+V+63/g1paRpfEB4PJAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAy
+  MS0wNS0xOFQwNzo0NzozMCswMDowMHByssQAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMThU
+  MDc6NDc6MzArMDA6MDABLwp4AAAARnRFWHRzb2Z0d2FyZQBJbWFnZU1hZ2ljayA2LjcuOC05IDIw
+  MTQtMDUtMTIgUTE2IGh0dHA6Ly93d3cuaW1hZ2VtYWdpY2sub3Jn3IbtAAAAABh0RVh0VGh1bWI6
+  OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpoZWlnaHQAMTkyDwBy
+  hQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5
+  cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE2MjEzMjQwNTDoHDF2AAAAD3RF
+  WHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zh
+  dmljb25zLzIwMjEtMDUtMTgvNjdiM2MxZWMzY2RhNTQwODgwYmI5MGU2NjJjNDcxMmYuaWNvLnBu
+  Z+QQzhgAAAAASUVORK5CYII=">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+     <link rel="stylesheet" href="/css/style.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+     <script src="/js/script.js"></script>
+     <title>LOGIN</title>
+</head>
+<body class="bg h-100">
+     <div class="container h-100 py-5">
+          <div class="row h-100 align-items-center justify-content-center">
+               <div class="col-md-4">
+                    <div class="mb-3 text-center">
+                         <img class="school-logo mx-auto" src="/images/tdt-logo.png" alt="tdt-logo">
+                    </div>
+
+                    <!-- Alert -->
+                    <% if (alert) { %> 
+                    <div class="shadow-sm mb-3 alert alert-<%= alert.status %>" role="alert">
+                         <i class="fas fa-exclamation-circle"></i>
+                         <%= alert.msg %>
+                    </div>
+                    <% } %> 
+
+                    <!-- Tabs -->
+                    <ul class="nav nav-tabs">
+                         <li id="student" class="nav-item">
+                              <a class="nav-link <%= (isStudent)?`active bg-primary text-white`:`bg-light text-dark` %>" href="#">Sinh viên</a>
+                         </li>
+                         <li id="not-student" class="nav-item">
+                              <a class="nav-link <%= (!isStudent)?`active bg-primary text-white`:`bg-light text-dark` %>" href="#">Phòng/Khoa</a>
+                         </li>
+                    </ul>
+
+                    <!-- Form đăng nhập của sinh viên -->
+                    <form id="studentLogin" class="p-4 bg-light rounded-bottom shadow-sm <%= (isStudent)?'':'d-none' %>">
+                         <div class="">
+                              <a href="/user/auth/google" class="btn btn-danger form-control">
+                                   <i class="fab fa-google mr-1"></i>
+                                   <span>Sử dụng email sinh viên</span>
+                              </a>
+                         </div>
+                    </form>
+
+                    <!-- Form đăng nhập của phòng/khoa cũng như của admin -->
+                    <form id="notStudentLogin" action="/user/login" method="post" class="p-4 bg-light <%= (!isStudent)?'':'d-none' %> rounded-bottom shadow-sm">              
+                         <input type="hidden" name="tab" value='not-student'>
+                         <!-- Username -->
+                         <div class="mb-3">
+                              <div class="input-group">
+                                   <i class="input-group-text fas fa-user-alt"></i>
+                                   <input class="form-control" type="text" name="username" id="username" placeholder="Username">
+                              </div>
+                         </div>
+
+                         <!-- Password -->
+                         <div class="mb-3">
+                              <div class="input-group">
+                                   <i class="input-group-text fas fa-key"></i>
+                                   <input class="form-control" type="password" name="password" id="password" placeholder="Password">
+                              </div>
+                         </div>
+
+                         <div class="">
+                              <input type="submit" class="btn btn-primary form-control" value="LOGIN">
+                         </div>
+                    </form>
+               </div>
+          </div>
+     </div>
+</body>
+</html>

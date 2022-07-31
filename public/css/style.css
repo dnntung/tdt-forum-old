@@ -1,0 +1,242 @@
+html { 
+     background: url('/images/bg.jpg') no-repeat center center fixed; 
+     background-size: cover;
+}
+
+body {
+     background-color: unset;
+}
+
+/* homepage */
+.navbar-brand > img {
+     height: 40px
+}
+
+.avatar {
+     padding: 0;
+     margin: 0;
+     overflow: hidden;
+}
+
+.avatar-full {
+     width: 150px;
+     height: 150px;
+}
+
+.avatar-profile {
+     height:40px;
+     width: 40px; 
+}
+
+.icon {
+     margin-left: .5rem
+}
+
+.nav-link.active {
+     border-radius: 0.25rem;
+     color: white !important;
+     background-color: var(--bs-primary) !important
+}
+
+.body {
+     max-width: 1050px
+}
+
+.body > .row{
+     top: 5rem
+}
+
+#news {
+     max-height: 500px;
+     top: 5rem
+}
+
+.spinner-header {
+     margin-right: 0.5rem
+}
+
+.label {
+     margin-left: .5rem
+}
+/* -------- */
+
+.navbar-menu {
+     margin-left: 0.5rem
+}
+
+.nav-link:hover.bg-light,
+.nav-link:hover:not(.active) > span {
+     color: #0d6efd !important;
+}
+
+.nav-link:not(.active) {
+     color: #212529;
+}
+
+.profile {
+     position: relative;
+     bottom: 0
+}
+
+.profile:hover {
+     color: #0d6efd !important;
+}
+
+.profile:hover > div > small {
+     color: #0d6efd !important;
+}
+
+.profile > .label {
+     line-height: 1.2rem;
+}
+
+.school-logo { 
+     width: 50%;
+}
+
+.header {
+     display: flex;
+     justify-content: flex-start;
+     font-size: 1.5rem;
+     box-sizing: content-box;
+     min-height: 2.5rem
+}
+
+.list-group-item {
+     border: unset
+}
+
+.header > img {
+     height: 2.5rem
+}
+
+.fas { 
+     line-height: 1.5;
+}
+
+.btn-icon {
+     margin-right: 5px;
+}
+
+.post-header {
+     font-size: 1rem;
+}
+
+.post-header.avatar,
+.poster.avatar {
+     width: 30px;
+     height: 30px;
+     min-width: 30px;
+     min-width: 30px;
+}
+
+.post-attachment { 
+     width: 100%;
+     max-height: 500px;
+     /* max-width: 700px; */
+     display: flex;
+     justify-content: center;
+     align-items:flex-start;
+     overflow: hidden
+}
+
+.post > .post-container > div:nth-child(2){
+     padding-left: 1rem;
+}
+
+.post-header > span,
+.post-header > small {
+     white-space: unset;
+}
+
+button > *,
+a > *{
+     pointer-events: none;
+}
+
+.post-header > .poster {
+     line-height: 1.2rem;
+}
+
+.post-bar > a > .label,
+.post-bar > button > .label{
+     margin-left: 0.5rem;
+}
+
+.post-bar > .heart:hover {
+     color: #dc3545;
+}
+
+.post-bar > .comment:hover {
+     color: #0d6efd;
+}
+
+.announcement:hover > div > h5 {
+     color: #0d6efd;
+}
+
+.textarea {
+     display: block;
+     width: 100%;
+     overflow: hidden;
+     resize: hidden;
+     min-height: 80px;
+     line-height: 20px;
+}
+   
+.textarea[contenteditable]:empty:before {
+     content: "Nhập nội dung bài viết...";
+     color: gray;
+}
+
+#uploadImageBtn:hover {
+     color: #198754;
+}
+
+#uploadYTVideoBtn:hover {
+     color: #dc3545
+}
+
+/* .poster > .name:hover {
+     color: #0d6efd !important;
+} */
+
+.noft-title {
+     line-height: 1.4rem;
+}
+
+.topic {
+     text-decoration: none;
+}
+
+#toasts {
+     z-index: 1000;
+}
+
+#cmtBtn { 
+     margin-left: .5rem
+}
+
+#cmtContent[contenteditable]:empty:before {
+     content: "Nhập bình luận...";
+     color: gray;
+}
+
+.noft-container {
+     line-height: 1.2rem;
+}
+
+.video-wrapper {
+     position: relative;
+     padding-bottom: 56.25%;
+     height: 0;
+     overflow: hidden;
+ }
+
+ .video-wrapper iframe {
+     position: absolute;
+     top:0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ }

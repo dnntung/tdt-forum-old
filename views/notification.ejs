@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="image/x-icon" rel="icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFzUkdC
+  AdnJLH8AAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAARpQTFRF
+  AAAA/////////////////////////////////////////////f7+/f7+////////stHm////sdDl
+  /v7/+/3+////1ObyYqPOXZ7KX6DLXJ7K//3999DL9L639sC5ppCeTXmkJ365CGmtUJbF1OXx+/3+
+  5vD34+724/D459fZ4lpJ4VJB3EEu46CbRZLESZHD9Pj7wdrrLYG6Inu3IXy4hmN35FtK99XR7JaL
+  5FRCsrLCE3Kzp8riaqXOBmmtbaHI2Kem87ev+d7a5GRV6Yh9c6nPRpDC7PP5/f7+ZKLMKYC72qqp
+  5l9N411M4VZF4VVE9dHN5fH56fL4z+LvF3Kyf7LV+dTP8rav8rew8rmy99TQ//z8YqHL2ujzAyDg
+  KQAAABV0Uk5TAAAHSafk+xiS7rEGkgZK7e3j7QaSbhp6TwAAAAFiS0dEAf8CLd4AAAAJcEhZcwAA
+  CxMAAAsTAQCanBgAAAC2SURBVBjTZY/VEsJADEWzsGyLtRRY3N3d3d1d//83kGGAgfOUm4fkXABA
+  IjGWECLBYhGCe0QMK6VPpCyDECBGRt/IGARyln6hUALHv2ad3mA0qTjAj2C2WG12h9Pl9mAQvD5/
+  IBgKhyPRWDxBBSDJVDqTzeULxVK5QikB4qnW6o1mq93p9vqPhTAYjsaT6Wy+WK7u1wTA6812tz8c
+  T+fnLwyc+nL9ePAcaLSDLzFW/q/+V+63/g1paRpfEB4PJAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAy
+  MS0wNS0xOFQwNzo0NzozMCswMDowMHByssQAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMThU
+  MDc6NDc6MzArMDA6MDABLwp4AAAARnRFWHRzb2Z0d2FyZQBJbWFnZU1hZ2ljayA2LjcuOC05IDIw
+  MTQtMDUtMTIgUTE2IGh0dHA6Ly93d3cuaW1hZ2VtYWdpY2sub3Jn3IbtAAAAABh0RVh0VGh1bWI6
+  OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpoZWlnaHQAMTkyDwBy
+  hQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5
+  cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE2MjEzMjQwNTDoHDF2AAAAD3RF
+  WHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zh
+  dmljb25zLzIwMjEtMDUtMTgvNjdiM2MxZWMzY2RhNTQwODgwYmI5MGU2NjJjNDcxMmYuaWNvLnBu
+  Z+QQzhgAAAAASUVORK5CYII=">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  
+  <title>Trang chủ - TDT Forum</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">
+        <img src="/images/tdt-logo.png" alt="TDT-Forum">
+      </a>
+      <div class="d-flex flex-row order-sm-last">
+        <!-- Navbar profile toggler -->
+        <button class="avatar avatar-profile rounded-circle navbar-toggler d-block" type="button" data-bs-toggle="dropdown">
+          <img class="w-100 h-100" src="<%= currentUser.avatar %>" alt="<%= currentUser.nameTag %>">
+        </button>
+        <ul class="dropdown-menu dropdown-menu dropdown-menu-end">
+          <li><a id="nameTag" href="/user/<%= currentUser.nameTag %>" class="dropdown-item"><strong>@<%= currentUser.nameTag %></strong></a></li>
+          <li><hr class="dropdown-divider"></li>
+          <% if (currentUser.role ===1) { %>
+            <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#createUserModal">Tạo tài khoản cho Phòng/Khoa</a></li>  
+          <% } %>
+          <% if (currentUser.role !==3) { %>
+            <li><a href="" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#changePasswordModal">Thay đổi mật khẩu</a></li>  
+          <% } %>
+          <li><a href="/user/logout" class="dropdown-item">Đăng xuất</a></li>
+        </ul>
+        <!-- Navbar menu toggler -->
+        <button class="navbar-menu navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarSupportedContent" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <!-- Navbar menu -->
+      <div class="collapse navbar-collapse mt-2 mt-sm-0" id="navbarMenu">
+        <ul class="navbar-nav me-auto mb-lg-0">
+          <li class="nav-item">
+            <a href="/" class="nav-link text-dark" aria-current="page" href="#">
+              <span class="icon"><i class="fas fa-home"></i></span>
+              <span class="label">Trang chủ</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/notification">
+              <span class="icon"><i class="fas fa-bell"></i></span>
+              <span class="label">Thông báo</span>
+            </a>
+          </li>
+      </div>
+    </div>
+  </nav>
+
+  <div class="body container-md px-3">
+    <div class="row position-relative pb-3">
+      <!-- Khu vực hiển thị thông tin người dùng -->
+      <div id="profile" class="col-md-4 position-sticky mb-3 mb-md-0">
+        <div class="bg-light shadow-sm rounded">
+          <!-- Tiêu đề trang -->
+          <div class="header p-3 rounded d-flex justify-content-between border-bottom bg-light">
+            <div class="d-flex">
+              <strong>Chuyên mục</strong> 
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="p-3 border-bottom">
+              <a href="#" class="topic" data-topic="">
+                <span class="badge rounded-pill bg-primary text-wrap">
+                  Tất cả
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Phòng Công tác học sinh sinh viên (CTHSSV)">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Phòng Công tác học sinh sinh viên (CTHSSV)
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Phòng Đại học">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Phòng Đại học
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Phòng Sau đại học">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Phòng Sau đại học
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Phòng điện toán và máy tính">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Phòng điện toán và máy tính
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Phòng khảo thí và kiểm định chất lượng">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Phòng khảo thí và kiểm định chất lượng
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Phòng tài chính">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Phòng tài chính
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="TDT Creative Language Center">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  TDT Creative Language Center
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Trung tâm tin học">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Trung tâm tin học
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Trung tâm đào tạo phát triển xã hội (SDTC)">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Trung tâm đào tạo phát triển xã hội (SDTC)
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Trung tâm phát triển Khoa học quản lý và Ứng dụng công nghệ (ATEM)">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Trung tâm phát triển Khoa học quản lý và Ứng dụng công nghệ (ATEM)
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Trung tâm hợp tác doanh nghiệp và cựu sinh viên">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Trung tâm hợp tác doanh nghiệp và cựu sinh viên
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa Luật">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa Luật
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Trung tâm ngoại ngữ - tin học – bồi dưỡng văn hóa">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Trung tâm ngoại ngữ - tin học – bồi dưỡng văn hóa
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Viện chính sách kinh tế và kinh doanh">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Viện chính sách kinh tế và kinh doanh
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa Mỹ thuật công nghiệp">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa Mỹ thuật công nghiệp
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa Điện – Điện tử">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa Điện – Điện tử
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa Công nghệ thông tin">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa Công nghệ thông tin
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa Quản trị kinh doanh">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa Quản trị kinh doanh
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa Môi trường và bảo hộ lao động">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa Môi trường và bảo hộ lao động
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa Lao động công đoàn">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa Lao động công đoàn
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa Tài chính ngân hàng">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa Tài chính ngân hàng
+                </span>
+              </a>
+              <a href="#" class="topic" data-topic="Khoa giáo dục quốc tế">
+                <span class="badge rounded-pill bg-secondary text-wrap">
+                  Khoa giáo dục quốc tế
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Khu vực hiển thị bài viết của người dùng-->
+      <div id="nofts" class="col-md-8">
+        <div class="pb-0 bg-light shadow-sm rounded">
+          <!-- Tiêu đề trang -->
+          <div class="header p-3 rounded d-flex justify-content-between border-bottom bg-light">
+            <div class="d-flex">
+              <strong>Thông báo</strong> 
+            </div>
+            <% if (currentUser.role !== 3) {%>
+              <button id="createNoftBtn" class="btn btn-primary rounded text-center" data-bs-toggle="modal" data-bs-target="#createNoftModal">
+                <span><i class="fas fa-edit"></i></span>
+                <span class="label">Thông báo mới</span>
+              </button>
+            <% } %>
+          </div>
+
+          <!-- Khu vực chính -->
+          <div class="content">
+            <div>
+              <div id="noft-list">
+                <!-- Thông báo mẫu -->
+                <!-- <div class="noft p-3 border-bottom" data-id>
+                  <div class="noft-container">
+                    <div class="noft-header d-flex justify-content-between">
+                      <div class="fw-bold">
+                        <a href="#" class="noft-title text-decoration-none" data-bs-toggle="modal" data-bs-target="#viewNoftModal">
+                          Thông báo dừng tổ chức thi tiếng Anh - HK1/2020-2021 giai đoạn 1 - ngày thi 16/05/2021
+                        </a>
+                      </div>
+                      <div class="noft-options">
+                        <button class="rounded btn" data-bs-toggle="dropdown">  
+                          <span><i class="fas fa-ellipsis-h"></i></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu dropdown-menu-end">
+                          <li>
+                            <button class="dropdown-item post-edit">
+                              <span><i class="fas fa-pen"></i></span>
+                              <span class="label">Chỉnh sửa thông báo</span>
+                            </button>
+                          </li>  
+                          <li>
+                            <button class="dropdown-item post-delete" data-bs-toggle="modal" data-bs-target="#deletePostModal">
+                              <span><i class="fas fa-trash-alt"></i></span>
+                              <span class="label">Xóa thông báo</span>
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="mt-1 text-muted">
+                      <span class="noft-topic">Phòng Đại học</span>
+                      <span> - </span>
+                      <span class="noft-dateCreated">16/5/2021</span>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+              <div class="loading text-center text-primary py-3">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+            <ul class="pagination justify-content-center py-3">
+              <li id="prevPage" class="page-item">
+                <a class="page-link" href="#">
+                  <i class="fas fa-caret-left"></i>
+                </a>
+              </li>
+              <li id="currentPage" class="page-item active">
+                <a class="page-link">
+                  1
+                </a>
+              </li>
+              <li id="nextPage" class="page-item">
+                <a class="page-link" href="#">
+                  <i class="fas fa-caret-right"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>        
+    </div>
+  </div>
+  <div id="viewNoftModal" class="modal fade">
+    <div class="modal-dialog modal-xl modal-fullscreen-md-down modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="spinner-header mr-3">
+            <div class="spinner-border ms-auto text-primary"></div>
+          </div>
+          <div class="modal-title">
+            <h5 class=" fw-bold m-0">
+            </h5>
+            <div class=text-muted>
+            </div>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        </div>
+      </div>
+    </div>
+  </div>
+  <% if (currentUser.role !== 3) { %>
+    <div id="changePasswordModal" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="spinner-header mr-3">
+              <div class="spinner-border ms-auto text-primary"></div>
+            </div>
+            <h5 class="modal-title"><strong>Thay đổi mật khẩu</strong></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="currentPassword" class="form-label"><strong>Mật khẩu hiện tại</strong></label>
+              <input type="password" id="currentPassword" class="form-control" placeholder="Nhập mật khẩu hiện tại">
+            </div>
+            <div class="mb-3">
+              <label for="newPassword" class="form-label"><strong>Mật khẩu mới</strong></label>
+              <input type="password" id="newPassword" rows="20" class="form-control" placeholder="Nhập mật khẩu mới">
+            </div>
+            <div>
+              <label for="confirmNewPassword" class="form-label"><strong>Xác nhận mật khẩu mới</strong></label>
+              <input type="password" id="confirmNewPassword" rows="20" class="form-control" placeholder="Nhập lại mật khẩu mới">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="cancelChangePassword" class="form-control-btn btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button id="confirmChangePassword" type="button" class="disabled form-control-btn btn btn-danger">Xác nhận</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="createNoftModal" class="modal fade">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="spinner-header mr-3">
+              <div class="spinner-border ms-auto text-primary"></div>
+            </div>
+            <h5 class="modal-title"><strong>Thông báo mới</strong></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="noft-title" class="form-label"><strong>Tiêu đề thông báo</strong></label>
+              <input type="text" id="noft-title" class="form-control" placeholder="Nhập tiêu đề thông báo">
+            </div>
+            <div>
+              <label for="noft-content" class="form-label"><strong>Nội dung thông báo</strong></label>
+              <textarea id="noft-content" rows="20" class="form-control" placeholder="Nhập nội dung thông báo"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <div>
+              <select id="noft-topics" class="form-select" aria-label="Default select example">
+                <option value="empty" selected>Chọn chuyên mục thông báo</option>
+              </select>
+            </div>
+            <div>
+              <a id="confirmCreateNoft" class="form-control-btn btn btn-primary rounded disabled">
+                <span><i class="far fa-paper-plane"></i></span>
+                <span class="label">Tạo thông báo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="deleteNoftModal" class="modal fade">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="spinner-header mr-3">
+              <div class="spinner-border ms-auto text-primary"></div>
+            </div>
+            <h5 class="modal-title"><strong>Xóa thông báo</strong></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Bạn thực sự muốn xóa thông báo này?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="form-control-btn btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button id="confirmDeleteNoft" type="button" class="form-control-btn btn btn-danger">Xác nhận</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="editNoftModal" class="modal fade">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="spinner-header mr-3">
+              <div class="spinner-border ms-auto text-primary"></div>
+            </div>
+            <h5 class="modal-title"><strong>Chỉnh sửa thông báo</strong></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="edit-noft-title" class="form-label"><strong>Tiêu đề thông báo</strong></label>
+              <input type="text" id="edit-noft-title" class="form-control" placeholder="Nhập tiêu đề thông báo">
+            </div>
+            <div>
+              <label for="edit-noft-content" class="form-label"><strong>Nội dung thông báo</strong></label>
+              <textarea id="edit-noft-content" rows="20" class="form-control" placeholder="Nhập nội dung thông báo"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="form-control-btn btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button id="confirmEditNoft" type="button" class="form-control-btn btn btn-danger">Xác nhận</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+
+  <% if (currentUser.role ===1) { %>
+    <div id="createUserModal" class="modal fade">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="spinner-header mr-3">
+              <div class="spinner-border ms-auto text-primary"></div>
+            </div>
+            <h5 class="modal-title"><strong>Tạo tài khoản mới</strong></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-3">
+              <div class="col-md">
+                <label for="username" class="form-label"><strong>Tên người dùng</strong></label>
+                <input type="text" id="username" class="form-control" placeholder="Nhập tên người dùng">
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-md mb-3">
+                <label for="password" class="form-label"><strong>Mật khẩu</strong></label>
+                <input type="password" id="password" rows="20" class="form-control" placeholder="Nhập mật khẩu">
+              </div>
+              <div class="col-md mb-3">
+                <label for="confirmPassword" class="form-label"><strong>Xác nhận mật khẩu</strong></label>
+                <input type="password" id="confirmPassword" rows="20" class="form-control" placeholder="Nhập lại mật khẩu">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="mb-2"><strong>Người dùng có thể đăng bài ở 1 trong các chuyên mục:</strong></div>
+              <div class="col-md">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Phòng Công tác học sinh sinh viên (CTHSSV)">
+                  <span class="form-check-label" >
+                    Phòng Công tác học sinh sinh viên (CTHSSV)
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Phòng Đại học">
+                  <span class="form-check-label" >
+                    Phòng Đại học
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Phòng Sau đại học">
+                  <span class="form-check-label" >
+                    Phòng Sau đại học
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Phòng điện toán và máy tính">
+                  <span class="form-check-label" >
+                    Phòng điện toán và máy tính
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Phòng khảo thí và kiểm định chất lượng">
+                  <span class="form-check-label" >
+                    Phòng khảo thí và kiểm định chất lượng
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Phòng tài chính">
+                  <span class="form-check-label" >
+                    Phòng tài chính
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="TDT Creative Language Center">
+                  <span class="form-check-label" >
+                    TDT Creative Language Center
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Trung tâm tin học">
+                  <span class="form-check-label" >
+                    Trung tâm tin học
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Trung tâm đào tạo phát triển xã hội (SDTC)">
+                  <span class="form-check-label" >
+                    Trung tâm đào tạo phát triển xã hội (SDTC)
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Trung tâm phát triển Khoa học quản lý và Ứng dụng công nghệ (ATEM)">
+                  <span class="form-check-label" >
+                    Trung tâm phát triển Khoa học quản lý và Ứng dụng công nghệ (ATEM)
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Trung tâm hợp tác doanh nghiệp và cựu sinh viên">
+                  <span class="form-check-label" >
+                    Trung tâm hợp tác doanh nghiệp và cựu sinh viên
+                  </span>
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Khoa Luật">
+                  <span class="form-check-label" >
+                    Khoa Luật
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Trung tâm ngoại ngữ - tin học – bồi dưỡng văn hóa">
+                  <span class="form-check-label" >
+                    Trung tâm ngoại ngữ - tin học – bồi dưỡng văn hóa
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Viện chính sách kinh tế và kinh doanh">
+                  <span class="form-check-label" >
+                    Viện chính sách kinh tế và kinh doanh
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Khoa Mỹ thuật công nghiệp">
+                  <span class="form-check-label" >
+                    Khoa Mỹ thuật công nghiệp
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Khoa Điện – Điện tử">
+                  <span class="form-check-label" >
+                    Khoa Điện – Điện tử
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Khoa Công nghệ thông tin">
+                  <span class="form-check-label" >
+                    Khoa Công nghệ thông tin
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Khoa Quản trị kinh doanh">
+                  <span class="form-check-label" >
+                    Khoa Quản trị kinh doanh
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Khoa Môi trường và bảo hộ lao động">
+                  <span class="form-check-label" >
+                    Khoa Môi trường và bảo hộ lao động
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Khoa Lao động công đoàn">
+                  <span class="form-check-label" >
+                    Khoa Lao động công đoàn
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Khoa Tài chính ngân hàng">
+                  <span class="form-check-label" >
+                    Khoa Tài chính ngân hàng
+                  </span>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="Trung tâm hợp tác doanh nghiệp và cựu sinh viên">
+                  <span class="form-check-label" >
+                    Khoa giáo dục quốc tế
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" id="cancelCreateUser" class="form-control-btn btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+            <button id="confirmCreateUser" type="button" class="disabled form-control-btn btn btn-danger">Xác nhận</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% } %>
+  <div id="toasts" class="toast-container  position-fixed bottom-0 start-0 p-3">
+  </div>
+  <footer>
+    <script src="/js/script.js"></script>
+  </footer>
+</body>
+</html>

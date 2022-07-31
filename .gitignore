@@ -1,0 +1,7 @@
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
+admin_account
+/public/images/posts
+/public/images/users
